@@ -155,6 +155,50 @@
             </div>
         </div>
       </section>
+      <!--  -->
+      <!-- cer -->
+     <section class="certifications" id="certifications">
+        <h2 class="heading">My <span>Certifications</span></h2>
+        <!-- Carousel for Certification Images -->
+        <div class="cert-carousel">
+          <!-- Left scroll button -->
+          <button class="scroll-btn scroll-left" onclick="scrollCarousel(-1)">&#10094;</button>
+      
+          <!-- Carousel track -->
+          <div class="carousel-track" id="carouselTrack">
+            <img src="img/ceh.jpg" alt="Certified Ethical Hacker - Simplilearn" onclick="showCertDetails('Certified Ethical Hacker - Simplilearn', 'https://drive.google.com/file/d/1aTpjoe0atMuWnjvh9LXGKD5nwmU_zYRC/view?usp=drive_link')">
+            <img src="img/ACMEGRADE INTERNSHIP.jpg" alt="Cyber Security Internship - Acmegrade" onclick="showCertDetails('Cyber Security Internship - Acmegrade', 'https://drive.google.com/file/d/1xFya3V9rdUZWpOuCOzVaPtbGpnE_X-Bm/view?usp=drive_link')">
+            <img src="img/ACMEGRADE TRAINING.jpg" alt="Cyber Security Training - Acmegrade" onclick="showCertDetails('Cyber Security Training - Acmegrade', 'https://drive.google.com/file/d/1A9eNlbhMXYYIJDyO8IKXpj8BPzdZN0Ot/view?usp=drive_link')">
+            <img src="img/IITB certification.jpg" alt="Ethical Hacking Workshop - IIT Bhubaneswar" onclick="showCertDetails('Ethical Hacking Workshop - IIT Bhubaneswar', 'https://drive.google.com/file/d/1hRz4iygQC3hMVsTJrMAHlHyeTLRJMggd/view?usp=drive_link')">
+            <img src="img/dsa.jpg" alt="DSA with Java - Apna College" onclick="showCertDetails('DSA with Java - Apna College', 'https://drive.google.com/file/d/1BwWOCnflmrlUaNgrd5rT9bF7y9HvInSs/view?usp=drive_link')">
+            <img src="img/hacker_Rank JS.jpg" alt="JavaScript - HackerRank" onclick="showCertDetails('JavaScript - HackerRank', 'https://drive.google.com/file/d/1h7hg54L5V0-K0-yad87uItf2YoffFxvs/view?usp=drive_link')">
+          </div>
+      
+          <!-- Right scroll button -->
+          <button class="scroll-btn scroll-right" onclick="scrollCarousel(1)">&#10095;</button>
+        </div>
+      
+        <!-- Certification details shown dynamically -->
+        <div class="cert-details" id="certDetails" style="margin-top: 20px; text-align: center;"></div>
+      </section>
+      
+      <!-- JavaScript -->
+      <script>
+        function showCertDetails(name, link) {
+          document.getElementById('certDetails').innerHTML = `
+            <p><strong>${name}</strong><br>
+            <a href="${link}" target="_blank">View Certificate</a></p>
+          `;
+        }     
+        function scrollCarousel(direction) {
+          const track = document.getElementById('carouselTrack');
+          const scrollAmount = 300;
+          track.scrollBy({
+            left: direction * scrollAmount,
+            behavior: 'smooth'
+          });
+        }
+      </script>
       <!-- Skills Sections -->
        <section class="skills" id="skills">
         <h2 class="heading">My <span>Skills</span>  <span class="animate scroll" style="--i:1;"></span></h2>
@@ -268,47 +312,5 @@
          <script src="script.js"></script>
          <!-- certiiiiiiiiiiiiiiiiiiiiiiiiii -->
 
-</body> <!-- cer -->
-     <section class="certifications" id="certifications">
-        <h2 class="heading">My <span>Certifications</span></h2>
-        <!-- Carousel for Certification Images -->
-        <div class="cert-carousel">
-          <!-- Left scroll button -->
-          <button class="scroll-btn scroll-left" onclick="scrollCarousel(-1)">&#10094;</button>
-      
-          <!-- Carousel track -->
-          <div class="carousel-track" id="carouselTrack">
-            <img src="img/ceh.jpg" alt="Certified Ethical Hacker - Simplilearn" onclick="showCertDetails('Certified Ethical Hacker - Simplilearn', 'https://drive.google.com/file/d/1aTpjoe0atMuWnjvh9LXGKD5nwmU_zYRC/view?usp=drive_link')">
-            <img src="img/ACMEGRADE INTERNSHIP.jpg" alt="Cyber Security Internship - Acmegrade" onclick="showCertDetails('Cyber Security Internship - Acmegrade', 'https://drive.google.com/file/d/1xFya3V9rdUZWpOuCOzVaPtbGpnE_X-Bm/view?usp=drive_link')">
-            <img src="img/ACMEGRADE TRAINING.jpg" alt="Cyber Security Training - Acmegrade" onclick="showCertDetails('Cyber Security Training - Acmegrade', 'https://drive.google.com/file/d/1A9eNlbhMXYYIJDyO8IKXpj8BPzdZN0Ot/view?usp=drive_link')">
-            <img src="img/IITB certification.jpg" alt="Ethical Hacking Workshop - IIT Bhubaneswar" onclick="showCertDetails('Ethical Hacking Workshop - IIT Bhubaneswar', 'https://drive.google.com/file/d/1hRz4iygQC3hMVsTJrMAHlHyeTLRJMggd/view?usp=drive_link')">
-            <img src="img/dsa.jpg" alt="DSA with Java - Apna College" onclick="showCertDetails('DSA with Java - Apna College', 'https://drive.google.com/file/d/1BwWOCnflmrlUaNgrd5rT9bF7y9HvInSs/view?usp=drive_link')">
-            <img src="img/hacker_Rank JS.jpg" alt="JavaScript - HackerRank" onclick="showCertDetails('JavaScript - HackerRank', 'https://drive.google.com/file/d/1h7hg54L5V0-K0-yad87uItf2YoffFxvs/view?usp=drive_link')">
-          </div>
-      
-          <!-- Right scroll button -->
-          <button class="scroll-btn scroll-right" onclick="scrollCarousel(1)">&#10095;</button>
-        </div>
-      
-        <!-- Certification details shown dynamically -->
-        <div class="cert-details" id="certDetails" style="margin-top: 20px; text-align: center;"></div>
-      </section>
-      
-      <!-- JavaScript -->
-      <script>
-        function showCertDetails(name, link) {
-          document.getElementById('certDetails').innerHTML = `
-            <p><strong>${name}</strong><br>
-            <a href="${link}" target="_blank">View Certificate</a></p>
-          `;
-        }     
-        function scrollCarousel(direction) {
-          const track = document.getElementById('carouselTrack');
-          const scrollAmount = 300;
-          track.scrollBy({
-            left: direction * scrollAmount,
-            behavior: 'smooth'
-          });
-        }
-      </script>
+</body> 
 </html>
